@@ -2,28 +2,30 @@ import React from 'react';
 // import { Row, Col} from 'react-bootstrap';
 // import { Navbar, Container, NavDropdown, Nav} from "react-bootstrap";
 import { Navbar, Container} from "react-bootstrap";
-
+import { Link } from 'react-router-dom';
 import logo from '../logo.svg'
 import { ShoppingCart } from './ShoppingCart/ShoppingCart';
 // import { ShoppingCart } from "./ShoppingCart/ShoppingCart";
 
+    
 export const HeaderApp = () => (
 
     // <Navbar bg='dark' variant='dark' style={style}>
     <Navbar bg='dark' variant='dark'>
         <Container>
-            <Navbar.Brand href='#home'>
-                <img
-                    alt=''
-                    src={logo}
-                    width='30'
-                    height='30'
-                    className='d-inline-block align-top'
-                />{' '}
-            Mini Ecommerce
-            </Navbar.Brand>
+            <Link to={'/'}>
+                <Navbar.Brand href='#home'>
+                    <img
+                        alt=''
+                        src={logo}
+                        width='30'
+                        height='30'
+                        className='d-inline-block align-top'
+                    />{' '}
+                Mini Ecommerce
+                </Navbar.Brand>
+            </Link>
             <ShoppingCart />
-            
         </Container>
     </Navbar>
     

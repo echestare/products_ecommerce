@@ -21,13 +21,14 @@ export const AlertProduct = () =>{
         
     if (show){
         return(
+            <>
             <Alert variant='danger' onClose={() => setShow(true)} dismissible>
                 <Alert.Heading> ¡Continúa comprando!</Alert.Heading>
                 <p>
                     ¡¡¡Aprovecha para comprar el producto {product} antes de que se agote!!!
                 </p>
             </Alert>
-
+            </>
         );
     }
     else{
